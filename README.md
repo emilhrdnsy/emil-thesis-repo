@@ -4,9 +4,9 @@ This is the Jupyter Notebook and the Dataset for the mentioned Classification Pr
 
 ### About the dataset:
 
-The "Framingham" dataset is publically available on the Kaggle website, and it is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. The classification goal is to predict whether the patient has 10-year risk of future coronary heart disease (CHD).The dataset provides the patients’ information. It includes over 4,240 records and 15 attributes.
+Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yang diambil dari Kaggle, yang berisi 52 atribut dan 37.079 catatan. NHANES (National Health and Nutrition Examination Survey) adalah survei yang dilakukan oleh National Center Health Statistics (NCHS). NCHS adalah bagian dari Centers for Disease Control and Prevention (CDC) di Amerika Serikat untuk memahami kondisi kesehatan dan gizi penduduk Amerika Serikat. Pada penelitian ini menggunakan data NHANES yang diperoleh dari tahun 1999-2000 hingga 2017-2018. Data diperoleh dalam tiga kategori data demografi, data pemeriksaan dan data laboratorium. Variabel demografi mencakup usia dan jenis kelamin partisipan survei pada saat pemeriksaan. Berat badan partisipan, tekanan darah dan indeks massa tubuh (BMI) dari data pemeriksaan juga dianggap sebagai seperangkat variabel faktor risiko untuk mempelajari pengaruhnya terhadap penyakit kardiovaskular.
 
-### Objective: To build a classification model that predicts Ten Year Coronary Heart Disease in a subject.
+### Objective: To build a classification model that classify Coronary Heart Disease in a subject.
 
 ### I have performed the following steps: 
 
