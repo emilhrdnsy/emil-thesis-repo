@@ -32,8 +32,8 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 ## Outlier Detection with IQR
 <p align="justify">
 Dengan penggunaan Boxplot untuk memvisualisasikan outlier pada data. Berikut adalah boxplot dari variabel numerik yang ada pada dataframe, ditampilkan pada Gambar dibawah.
-![image alt](https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png)
 </p>
+![image alt](https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png)
 
 ## Handling Outlier with Median
 ![image alt](https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Handling%20Outlier%20with%20median.png)
