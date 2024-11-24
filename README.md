@@ -9,7 +9,7 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 ## Objective: To build a classification model that classify Coronary Heart Disease in a subject.
 
 
-### I have performed the following steps: 
+## I have performed the following steps: 
 
 1. Read the file and displayed its columns.
 2. Handled missing values and Outliers.
