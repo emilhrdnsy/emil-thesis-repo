@@ -33,7 +33,7 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 <p align="justify">
 Dengan penggunaan Boxplot untuk memvisualisasikan outlier pada data. Berikut adalah boxplot dari variabel numerik yang ada pada dataframe, ditampilkan pada Gambar dibawah.
 </p>
-<img src="[images/my_image.png](https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png)" alt="My Image" width="400">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png" alt="My Image" width="400">
 
 
 ## Handling Outlier with Median
