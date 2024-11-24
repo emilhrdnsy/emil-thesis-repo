@@ -12,7 +12,6 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 
 
 ## I have performed the following steps: 
-<p align="justify">
 1. Read the file and displayed its columns.
 2. Handled missing values and Outliers.
 3. Calculated basic statistics of the data (count, mean, std, etc), did exploratory analysis and described my observations.
@@ -29,7 +28,6 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 9. Evaluated each model (f1 score, Accuracy, Precision ,Recall and Confusion Matrix) and plotted a graph for the false positive rate and true positive rate for each model.
 10. Ensembled the four best models using Stacking technique to further increase the accuracy of the model and achieved an accuracy score of 96.17%
 11. Concluded that Ensembling all the four most important models, with Random Forest Classification leading the way, has resulted in a very high accuracy score.
-</p>
 
 ## Outlier Detection with IQR
 <p align="justify">
