@@ -56,7 +56,7 @@ Sintetis pada SMOTE mengindikasikan bahwa tidak adanya duplikasi data pada data 
 <p align="justify">
 Adapun cara untuk mengetahui data mana yang penting adalah dengan menganalisis nilai korelasinya. Untuk mempermudah proses analisis, dapat digunakan Heatmap Visualization. Berikut adalah Heatmap Visualization, seperti yang ditunjukkan pada Gambar dibawah. Metode ini menghitung koefisien korelasi antara kolom dalam DataFrame, yang membantu dalam mengidentifikasi hubungan antara variabel. Nilai korelasi berkisar angtara -1 sampai 1. Jika bernilai negatif maka data memiliki korelasi negatif, dan sebaliknya. Namun, jika nilai korelasi mendekati nol, artinya data tersebut hampir tidak memiliki korelasi atau korelasinya rendah, sehingga data tersebut bukan merupakan data yang penting. Variabel dengan korelasi rendah dapat mengganggu akurasi model.
    
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Features%20Correlation%20with%20Coronary%20Heart%20Disease.png" alt="Resampling" width="1000">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Heatmap%20Visualization.png" alt="heatmap visualization" width="1000">
 
 </p>
 
@@ -66,7 +66,7 @@ Adapun cara untuk mengetahui data mana yang penting adalah dengan menganalisis n
 Pada tahap awal eksperimen, model Gradient Boosting digunakan tanpa melakukan tuning hyperparameter. Hal ini bertujuan untuk memperoleh baseline performa dari model dengan menggunakan nilai default yang disediakan oleh library scikit-learn versi 1.02. Model ini diterapkan tanpa pendekatan sistematis dalam pengaturan hyperparameter, sehingga hasil yang diperoleh akan menjadi acuan untuk perbandingan dengan eksperimen selanjutnya yang melibatkan proses tuning hyperparameter.
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20dengan%20hyperparameter%20default.png" alt="hyperparameter default" width="1000">
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="500">
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/AUC-ROC%20Curve.png" alt="confussion matrix" width="500"> 
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/AUC-ROC%20Curve.png" alt="auc roc curve" width="500"> 
 </p>
 
 ### Setelah Menggunakan TPE
