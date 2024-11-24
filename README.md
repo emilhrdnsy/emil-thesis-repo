@@ -46,19 +46,17 @@ Setelah mengganti outlier ekstrem dengan median, jumlah outlier yang signifikan 
 ## SMOTE untuk Resampling
 <p align="justify">
 SMOTE bekerja dengan cara mengambil secara acak tetangga terdekat sebanyak k dari setiap instance dalam kelas minoritas kemudian membuat instance baru (sintetis) antara instance tersebut dengan tetangga terdekat k yang dipilih secara acak seperti yang ditampilkan pada Gambar dibawah. Dengan pendekatan SMOTE maka dapat dipastikan tidak terjadi masalah duplikasi data sehingga lebih kebal terhadap masalah overfitting. algoritma memilih sampel acak dari kelas minoritas dan memilih tetangga acak menggunakan K-Nearest Neighbors.
-
+</p>
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Resampling.png" alt="Resampling" width="1000">
-
+<p align="justify">
 Sintetis pada SMOTE mengindikasikan bahwa tidak adanya duplikasi data pada data yang diresample. SMOTE meningkatkan sampel kelas minoritas sambil menghindari overfitting. Hal ini dilakukan dengan menghasilkan contoh sintetik baru yang dekat dengan titik lain (yang termasuk dalam kelas minoritas) dalam ruang fitur.
 </p>
 
 ## Matrix Korelasi
 <p align="justify">
 Adapun cara untuk mengetahui data mana yang penting adalah dengan menganalisis nilai korelasinya. Untuk mempermudah proses analisis, dapat digunakan Heatmap Visualization. Berikut adalah Heatmap Visualization, seperti yang ditunjukkan pada Gambar dibawah. Metode ini menghitung koefisien korelasi antara kolom dalam DataFrame, yang membantu dalam mengidentifikasi hubungan antara variabel. Nilai korelasi berkisar angtara -1 sampai 1. Jika bernilai negatif maka data memiliki korelasi negatif, dan sebaliknya. Namun, jika nilai korelasi mendekati nol, artinya data tersebut hampir tidak memiliki korelasi atau korelasinya rendah, sehingga data tersebut bukan merupakan data yang penting. Variabel dengan korelasi rendah dapat mengganggu akurasi model.
-   
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Heatmap%20Visualization.png" alt="heatmap visualization" width="1000">
-
 </p>
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Heatmap%20Visualization.png" alt="heatmap visualization" width="1000">
 
 ## Eksperimen secara empirik dan eksperimental
 ### Eksperimen Awal (Tanpa Hyperparameter Tuning)
