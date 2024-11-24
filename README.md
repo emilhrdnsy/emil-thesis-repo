@@ -68,4 +68,11 @@ Pada tahap awal eksperimen, model Gradient Boosting digunakan tanpa melakukan tu
 </p>
 
 ### Setelah Menggunakan TPE
+<p align="justify">
+Setelah melakukan tuning hyperparameter menggunakan metode Tree-Structured Parzen Estimator (TPE), hyperparameter model dioptimalkan untuk meningkatkan performa secara signifikan. TPE memungkinkan pencarian hyperparameter yang lebih efisien dengan mengarahkan pencarian ke area yang lebih menjanjikan dalam ruang pencarian, berdasarkan hasil dari trial sebelumnya.
+Setelah melakukan tuning hyperparameter menggunakan metode Tree-structured Parzen Estimator (TPE), hyperparameter dioptimalkan untuk meningkatkan performa model. Hasil eksperimen menunjukkan peningkatan akurasi model secara signifikan dengan waktu komputasi yang lebih rendah, serta pengurangan risiko overfitting karena optimisasi yang lebih presisi dalam pemilihan jumlah pohon keputusan (estimasi), kedalaman pohon, dan parameter lainnya.
+</p>
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20setelah%20dituning.png" alt="model setelah tuning" width="1000">
+
+
 
