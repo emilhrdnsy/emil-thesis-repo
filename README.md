@@ -33,11 +33,11 @@ Data yang digunakan dalam penelitian ini adalah Starter: Cardiac data NHANES yan
 <p align="justify">
 Dengan penggunaan Boxplot untuk memvisualisasikan outlier pada data. Berikut adalah boxplot dari variabel numerik yang ada pada dataframe, ditampilkan pada Gambar dibawah.
 </p>
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png" alt="Outlier" width="1000">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Outlier.png" alt="Outlier" width="800">
 
 
 ## Handling Outlier with Median
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Handling%20Outlier%20with%20median.png" alt="Handling Outlier with Median" width="1000">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Handling%20Outlier%20with%20median.png" alt="Handling Outlier with Median" width="800">
 <p align="justify">
 Gambar diatas menampilkan boxplot dengan Q1, Q3, IQR, dan whisker yang menunjukkan lower bound dan upper bound. Data yang berada di luar whisker akan dianggap sebagai outlier. Sebagian besar variabel memiliki sejumlah outlier yang signifikan, beberapa di antaranya sangat jauh dari whisker. Ini menunjukkan bahwa ada nilai yang sangat tinggi atau sangat rendah yang tidak sesuai dengan distribusi utama data. Cara yang digunakan penulis untuk mengatasi data outlier adalah dengan melakukan imputasi, yaitu proses penggantian nilai outlier dengan nilai lain dan bukan menghapus nilai outlier karena jumlah outlier tidaklah sedikit. Jika outlier sangat ekstrim dan mempengaruhi rata-rata secara signifikan, maka mengganti outlier median adalah pilihan yang lebih baik. Langkah ini membantu mengurangi pengaruh outlier, namun dampak dari penggunaanya adalah terjadinya perubahan pada distribusi data.
 Setelah mengganti outlier ekstrem dengan median, jumlah outlier yang signifikan telah berkurang drastis. Beberapa variabel masih menunjukkan sedikit outlier, tetapi mereka tidak lagi se-ekstrim sebelumnya. Data tersebut sekarang lebih sedikit dan lebih dekat ke distribusi utama data seperti yang terlihat pada Gambar diatas.
@@ -47,7 +47,7 @@ Setelah mengganti outlier ekstrem dengan median, jumlah outlier yang signifikan 
 <p align="justify">
 SMOTE bekerja dengan cara mengambil secara acak tetangga terdekat sebanyak k dari setiap instance dalam kelas minoritas kemudian membuat instance baru (sintetis) antara instance tersebut dengan tetangga terdekat k yang dipilih secara acak seperti yang ditampilkan pada Gambar dibawah. Dengan pendekatan SMOTE maka dapat dipastikan tidak terjadi masalah duplikasi data sehingga lebih kebal terhadap masalah overfitting. algoritma memilih sampel acak dari kelas minoritas dan memilih tetangga acak menggunakan K-Nearest Neighbors.
 </p>
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Resampling.png" alt="Resampling" width="1000">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/Resampling.png" alt="Resampling" width="800">
 <p align="justify">
 Sintetis pada SMOTE mengindikasikan bahwa tidak adanya duplikasi data pada data yang diresample. SMOTE meningkatkan sampel kelas minoritas sambil menghindari overfitting. Hal ini dilakukan dengan menghasilkan contoh sintetik baru yang dekat dengan titik lain (yang termasuk dalam kelas minoritas) dalam ruang fitur.
 </p>
@@ -62,9 +62,9 @@ Adapun cara untuk mengetahui data mana yang penting adalah dengan menganalisis n
 ### Eksperimen Awal (Tanpa Hyperparameter Tuning)
 <p align="justify">
 Pada tahap awal eksperimen, model Gradient Boosting digunakan tanpa melakukan tuning hyperparameter. Hal ini bertujuan untuk memperoleh baseline performa dari model dengan menggunakan nilai default yang disediakan oleh library scikit-learn versi 1.02. Model ini diterapkan tanpa pendekatan sistematis dalam pengaturan hyperparameter, sehingga hasil yang diperoleh akan menjadi acuan untuk perbandingan dengan eksperimen selanjutnya yang melibatkan proses tuning hyperparameter.
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20dengan%20hyperparameter%20default.png" alt="hyperparameter default" width="1000">
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="500">
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/AUC-ROC%20Curve.png" alt="auc roc curve" width="500"> 
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20dengan%20hyperparameter%20default.png" alt="hyperparameter default" width="800">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="400">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/AUC-ROC%20Curve.png" alt="auc roc curve" width="400"> 
 </p>
 
 ### Setelah Menggunakan TPE
@@ -72,7 +72,7 @@ Pada tahap awal eksperimen, model Gradient Boosting digunakan tanpa melakukan tu
 Setelah melakukan tuning hyperparameter menggunakan metode Tree-Structured Parzen Estimator (TPE), hyperparameter model dioptimalkan untuk meningkatkan performa secara signifikan. TPE memungkinkan pencarian hyperparameter yang lebih efisien dengan mengarahkan pencarian ke area yang lebih menjanjikan dalam ruang pencarian, berdasarkan hasil dari trial sebelumnya.
 Setelah melakukan tuning hyperparameter menggunakan metode Tree-structured Parzen Estimator (TPE), hyperparameter dioptimalkan untuk meningkatkan performa model. Hasil eksperimen menunjukkan peningkatan akurasi model secara signifikan dengan waktu komputasi yang lebih rendah, serta pengurangan risiko overfitting karena optimisasi yang lebih presisi dalam pemilihan jumlah pohon keputusan (estimasi), kedalaman pohon, dan parameter lainnya.
 </p>
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20setelah%20dituning.png" alt="model setelah tuning" width="1000">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20setelah%20dituning.png" alt="model setelah tuning" width="800">
 
 
 
