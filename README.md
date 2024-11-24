@@ -75,4 +75,26 @@ Setelah melakukan tuning hyperparameter menggunakan metode Tree-structured Parze
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/model%20setelah%20dituning.png" alt="model setelah tuning" width="800">
 
 
+### Hasil Eksperimen Pengoptimalan Hyperparameter
+<p align="justify">
+Dari eksperimen yang telah dilakukan, penulis membuat evaluasi dengan menggunakan metode TPE. Pemilihan hyperparameter dilakukan dengan menjalankan search trials untuk TPE. Penulis memilih jumlah trials sebanyak 100, parameter ini yang akan menentukan berapa kali algoritma optimasi akan mencoba kombinasi hyperparameter yang berbeda. Setiap evaluasi berarti satu set hyperparameter dipilih dari search space, kemudian model dilatih dan dievaluasi menggunakan set hyperparameter tersebut. Hasil eksperimen yang dilakukan pada model Gradient Boosting dengan framework hyperopt menggunakan 27 fitur terpilih, data train sebanyak 56.914 data, data test sebanyak 14.229 data.
+</p>
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/TPE%20Search%20Trials.png" alt="model setelah tuning" width="800">
+<p align="justify">
+Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar trials menunjukkan accuracy yang sangat tinggi, ada beberapa trials yang menghasilkan accuracy yang jauh lebih rendah. Hal ini terjadi karena hyperparameter yang dipilih pada trial tersebut kurang optimal. Fluktuasi yang terlihat pada accuracy menunjukkan bahwa TPE sedang menjelajahi berbagai bagian dari search space hyperparameter, beberapa di antaranya menghasilkan accuracy yang lebih rendah. Namun, sebagian besar accuracy cukup stabil dan tinggi, menunjukkan bahwa model bekerja dengan baik pada banyak kombinasi hyperparameter. Trial dengan accuracy rendah disebabkan oleh kombinasi hyperparameter yang sangat tidak cocok untuk dataset ini. Penting untuk memeriksa hyperparameter yang dihasilkan oleh trial ini untuk menghindari konfigurasi serupa di masa depan. Gambar 21 memberikan gambaran yang baik tentang bagaimana TPE melakukan eksplorasi dalam ruang hyperparameter dan bagaimana performa model berfluktuasi selama proses tersebut. Berdasarkan trials diatas diketahui bahwa trials ke 77 adalah yang terbaik dengan test accuracy sebesar 0.9829 dan time computation 14310.94 seconds.
+</p>
+
+### Gradient Boosting Tree Visualization
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/gb_tree_visualization.png" alt="gb_tree_visualization" >
+
+### Evaluasi Kinerja Model yang diusulkan
+Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="400">
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/AUC-ROC%20Curve.png" alt="auc roc curve" width="400"> 
+
+
+
+
+
+
 
