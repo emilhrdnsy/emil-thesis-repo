@@ -84,7 +84,7 @@ Dari eksperimen yang telah dilakukan, penulis membuat evaluasi dengan menggunaka
 Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar trials menunjukkan accuracy yang sangat tinggi, ada beberapa trials yang menghasilkan accuracy yang jauh lebih rendah. Hal ini terjadi karena hyperparameter yang dipilih pada trial tersebut kurang optimal. Fluktuasi yang terlihat pada accuracy menunjukkan bahwa TPE sedang menjelajahi berbagai bagian dari search space hyperparameter, beberapa di antaranya menghasilkan accuracy yang lebih rendah. Namun, sebagian besar accuracy cukup stabil dan tinggi, menunjukkan bahwa model bekerja dengan baik pada banyak kombinasi hyperparameter. Trial dengan accuracy rendah disebabkan oleh kombinasi hyperparameter yang sangat tidak cocok untuk dataset ini. Penting untuk memeriksa hyperparameter yang dihasilkan oleh trial ini untuk menghindari konfigurasi serupa di masa depan. Gambar 21 memberikan gambaran yang baik tentang bagaimana TPE melakukan eksplorasi dalam ruang hyperparameter dan bagaimana performa model berfluktuasi selama proses tersebut. Berdasarkan trials diatas diketahui bahwa trials ke 77 adalah yang terbaik dengan test accuracy sebesar 0.9829 dan time computation 14310.94 seconds.
 </p>
 
-### Gradient Boosting Tree Visualization
+## Gradient Boosting Tree Visualization
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/gb_tree_visualization.png" alt="gb_tree_visualization" >
 1. Root node memulai proses pembagian dataset. Node ini  menggunakan fitur dengan informasi paling signifikan (gini impuruty) untuk membagi data.
 2. Intermediate Nodes (Simpul Tengah/Cabang): memecah subset data dari root node ke subset yang lebih kecil berdasarkan fitur lain.
