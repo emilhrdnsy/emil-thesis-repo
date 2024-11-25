@@ -89,7 +89,7 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
 
 1. **Root Node**:
     - Root node memulai proses pembagian dataset.
-    - Node ini menggunakan fitur dengan informasi paling signifikan (gini impurity) untuk membagi data.
+    - Pohon dibangun dengan memisahkan dataset berdasarkan fitur dengan pengurangan impuritas tertinggi (Gini Impurity).
 
 2. **Intermediate Nodes** (Simpul Tengah/Cabang):
     - Memecah subset data dari root node ke subset yang lebih kecil berdasarkan fitur lain.
@@ -104,8 +104,19 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
         - Menampilkan jumlah sampel yang ada dalam node tersebut.
         - Memberikan prediksi akhir (label kelas atau nilai prediksi untuk regresi).
      
-4. **Cabang** (Branch):
+4. **Branch** (Cabang):
     - Pohon terlihat simetris karena setiap node diperiksa untuk kondisi tertentu (misalnya, feature_x <= threshold), dan kedua cabang (kiri dan kanan) terus dipecah hingga memenuhi kriteria penghentian (stopping criteria).
+    - Parameter seperti max_depth (kedalaman maksimum pohon) membatasi seberapa dalam pohon dapat berkembang. Dalam pohon ini, kedalaman maksimum ditentukan oleh hyperparameter (max_depth=9), sehingga pohon tidak akan berkembang lebih dari 9 level.
+    - Karena setiap simpul memecah data berdasarkan fitur tertentu, pohon memiliki banyak node intermediate sebelum mencapai leaf nodes. Ini mencerminkan banyaknya aturan logis yang diterapkan untuk membuat prediksi.
+
+5. **Gradient Boosting Membatasi Overfitting**
+    - Pohon ini relatif dangkal dibandingkan pohon keputusan konvensional karena Gradient Boosting menggunakan beberapa pohon kecil (weak learners) untuk membentuk model akhir.
+    - Kedalaman yang terbatas mengurangi risiko overfitting sambil tetap menangkap pola-pola penting.
+
+6. **Node Tampak Padat**
+    - Karena Gradient Boosting membangun model secara iteratif, pohon ini mungkin tidak sepenuhnya mengurangi impuritas pada level terdalamnya.
+    - Beberapa cabang mungkin tampak lebih pendek karena data pada cabang tersebut tidak lagi memenuhi kriteria pemisahan lebih lanjut.
+
 
 ### Evaluasi Kinerja Model yang diusulkan
 Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
