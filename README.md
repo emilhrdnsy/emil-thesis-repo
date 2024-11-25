@@ -84,19 +84,24 @@ Dari eksperimen yang telah dilakukan, penulis membuat evaluasi dengan menggunaka
 Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar trials menunjukkan accuracy yang sangat tinggi, ada beberapa trials yang menghasilkan accuracy yang jauh lebih rendah. Hal ini terjadi karena hyperparameter yang dipilih pada trial tersebut kurang optimal. Fluktuasi yang terlihat pada accuracy menunjukkan bahwa TPE sedang menjelajahi berbagai bagian dari search space hyperparameter, beberapa di antaranya menghasilkan accuracy yang lebih rendah. Namun, sebagian besar accuracy cukup stabil dan tinggi, menunjukkan bahwa model bekerja dengan baik pada banyak kombinasi hyperparameter. Trial dengan accuracy rendah disebabkan oleh kombinasi hyperparameter yang sangat tidak cocok untuk dataset ini. Penting untuk memeriksa hyperparameter yang dihasilkan oleh trial ini untuk menghindari konfigurasi serupa di masa depan. Gambar 21 memberikan gambaran yang baik tentang bagaimana TPE melakukan eksplorasi dalam ruang hyperparameter dan bagaimana performa model berfluktuasi selama proses tersebut. Berdasarkan trials diatas diketahui bahwa trials ke 77 adalah yang terbaik dengan test accuracy sebesar 0.9829 dan time computation 14310.94 seconds.
 </p>
 
-## Gradient Boosting Tree Visualization
-<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/gb_tree_visualization.png" alt="gb_tree_visualization" >
-1. Root node memulai proses pembagian dataset. Node ini  menggunakan fitur dengan informasi paling signifikan (gini impuruty) untuk membagi data.
-2. Intermediate Nodes (Simpul Tengah/Cabang): memecah subset data dari root node ke subset yang lebih kecil berdasarkan fitur lain.
-   Mungkin memiliki dua cabang keluar:
-   Cabang kiri: Untuk nilai fitur yang memenuhi kondisi (<= threshold).
-   Cabang kanan: Untuk nilai fitur yang tidak memenuhi kondisi (> threshold).
-3. Leaf Nodes (Simpul Daun):
-   Posisi: Node paling bawah tanpa cabang keluar.
-   Fungsi: Simpul daun adalah tempat di mana keputusan akhir dibuat.
-   Karakteristik:
-      Menampilkan jumlah sampel yang ada dalam node tersebut.
-      Memberikan prediksi akhir (label kelas untuk klasifikasi atau nilai prediksi untuk regresi).
+### Gradient Boosting Tree Visualization
+<img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/gb_tree_visualization.png" alt="gb_tree_visualization">
+1. **Root Node**:
+    - Root node memulai proses pembagian dataset.
+    - Node ini menggunakan fitur dengan informasi paling signifikan (gini impurity) untuk membagi data.
+
+2. **Intermediate Nodes** (Simpul Tengah/Cabang):
+    - Memecah subset data dari root node ke subset yang lebih kecil berdasarkan fitur lain.
+    - Mungkin memiliki dua cabang keluar:
+        - **Cabang kiri**: Untuk nilai fitur yang memenuhi kondisi (<= threshold).
+        - **Cabang kanan**: Untuk nilai fitur yang tidak memenuhi kondisi (> threshold).
+          
+3. **Leaf Nodes** (Simpul Daun):
+    - Posisi: Node paling bawah tanpa cabang keluar.
+    - Fungsi: Simpul daun adalah tempat di mana keputusan akhir dibuat.
+    - Karakteristik:
+        - Menampilkan jumlah sampel yang ada dalam node tersebut.
+        - Memberikan prediksi akhir (label kelas atau nilai prediksi untuk regresi).
 
 ### Evaluasi Kinerja Model yang diusulkan
 Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
