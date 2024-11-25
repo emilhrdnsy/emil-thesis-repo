@@ -86,6 +86,7 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
 
 ### Gradient Boosting Tree Visualization
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/gb_tree_visualization.png" alt="gb_tree_visualization">
+
 1. **Root Node**:
     - Root node memulai proses pembagian dataset.
     - Node ini menggunakan fitur dengan informasi paling signifikan (gini impurity) untuk membagi data.
@@ -102,6 +103,9 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
     - Karakteristik:
         - Menampilkan jumlah sampel yang ada dalam node tersebut.
         - Memberikan prediksi akhir (label kelas atau nilai prediksi untuk regresi).
+     
+4. **Cabang** (Branch):
+    - Pohon terlihat simetris karena setiap node diperiksa untuk kondisi tertentu (misalnya, feature_x <= threshold), dan kedua cabang (kiri dan kanan) terus dipecah hingga memenuhi kriteria penghentian (stopping criteria).
 
 ### Evaluasi Kinerja Model yang diusulkan
 Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
