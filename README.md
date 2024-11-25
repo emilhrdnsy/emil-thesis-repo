@@ -118,6 +118,22 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
     - Beberapa cabang mungkin tampak lebih pendek karena data pada cabang tersebut tidak lagi memenuhi kriteria pemisahan lebih lanjut.
 
 
+### Faktor Utama yang Membentuk Struktur Pohon
+1. **Parameter Model**:
+   - max_depth: Mengontrol kedalaman maksimum pohon.
+   - min_samples_split dan min_samples_leaf: Mengontrol jumlah sampel minimum untuk pemisahan dan leaf nodes.
+   - max_features: Membatasi jumlah fitur yang diperiksa pada setiap pemisahan.
+Data:
+
+Distribusi dataset memengaruhi bagaimana pohon dibentuk. Data dengan variasi tinggi cenderung menghasilkan pohon yang lebih bercabang.
+Fungsi Kehilangan (Loss Function):
+
+Untuk klasifikasi, Gradient Boosting sering menggunakan Log Loss, yang mengarahkan pohon untuk memfokuskan pada sampel yang sulit diklasifikasikan.
+Impuritas Node:
+
+Pemisahan pada setiap node ditentukan berdasarkan pengurangan impuritas terbesar (misalnya, Gini atau Entropy).
+
+
 ### Evaluasi Kinerja Model yang diusulkan
 Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="400">
