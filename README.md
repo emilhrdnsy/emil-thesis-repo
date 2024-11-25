@@ -123,15 +123,13 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
    - max_depth: Mengontrol kedalaman maksimum pohon.
    - min_samples_split dan min_samples_leaf: Mengontrol jumlah sampel minimum untuk pemisahan dan leaf nodes.
    - max_features: Membatasi jumlah fitur yang diperiksa pada setiap pemisahan.
-Data:
-
-Distribusi dataset memengaruhi bagaimana pohon dibentuk. Data dengan variasi tinggi cenderung menghasilkan pohon yang lebih bercabang.
-Fungsi Kehilangan (Loss Function):
-
-Untuk klasifikasi, Gradient Boosting sering menggunakan Log Loss, yang mengarahkan pohon untuk memfokuskan pada sampel yang sulit diklasifikasikan.
-Impuritas Node:
-
-Pemisahan pada setiap node ditentukan berdasarkan pengurangan impuritas terbesar (misalnya, Gini atau Entropy).
+2. **Data**:
+   - Distribusi dataset memengaruhi bagaimana pohon dibentuk.
+   - Data dengan variasi tinggi cenderung menghasilkan pohon yang lebih bercabang.
+3. **Loss Function**:
+   - Untuk klasifikasi, Gradient Boosting sering menggunakan Log Loss, yang mengarahkan pohon untuk memfokuskan pada sampel yang sulit diklasifikasikan.
+4. **Impuritas Node**:
+   - Pemisahan pada setiap node ditentukan berdasarkan pengurangan impuritas terbesar (Gini).
 
 
 ### Evaluasi Kinerja Model yang diusulkan
