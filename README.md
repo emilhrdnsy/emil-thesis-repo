@@ -98,6 +98,10 @@ Berdasarkan kinerja model dari Gambar diatas, menujukkan bahwa sebagian besar tr
       Menampilkan jumlah sampel yang ada dalam node tersebut.
       Memberikan prediksi akhir (label kelas untuk klasifikasi atau nilai prediksi untuk regresi).
 
+1. Read the file and displayed its columns.
+2. Handled missing values and Outliers.
+3. Calculated basic statistic
+
 ### Evaluasi Kinerja Model yang diusulkan
 Confussion matrix merinci hasil prediksi yang dilakukan oleh model terhadap data uji, dengan memperlihatkan jumlah prediksi yang benar dan salah yang dibuat oleh model. Sedangkan, untuk kurva AUC-ROC adalah grafik yang digunakan untuk mengevaluasi kinerja model klasifikasi biner pada berbagai threshold keputusan. Evaluasi dengan beberapa metrik dapat memberikan pandangan yang lebih menyeluruh tentang performa model dan menggunakan satu metrik saja bisa menyebabkan kesimpulan yang bias atau tidak akurat.
 <img src="https://github.com/emilhrdnsy/emil-thesis-repo/blob/master/confussion%20matrix.png" alt="confussion matrix" width="400">
